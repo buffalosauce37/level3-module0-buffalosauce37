@@ -7,12 +7,32 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
+	static boolean x = true;
 	//1. make a main method
-	
-		//2. create an array of 5 robots.
+	public static void main(String[] args) {
+		Robot[] robots = new Robot[5];
+		for (int i = 0; i < robots.length; i++) {
+			robots[i] = new Robot();
+		}
+		robots[0].moveTo(100, 500);
+		robots[1].moveTo(300, 500);
+		robots[2].moveTo(500, 500);
+		robots[3].moveTo(700, 500);
+		robots[4].moveTo(800, 500);
+while (x == true) {
+		for (int i = 0; i < robots.length; i++) {
+			Random random = new Random();
+			robots[i].move(random.nextInt(51));
+			if(robots[i].getY() <= 0) {
+				x = false;
+				JOptionPane.showMessageDialog(null, robots[i] + " won");
+			}
+		}
+	}
+	}	//2. create an array of 5 robots.
 
 		//3. use a for loop to initialize the robots.
-
+		
 			//4. make each robot start at the bottom of the screen, side by side, facing up
 	
 		//5. use another for loop to iterate through the array and make each robot move 

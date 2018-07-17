@@ -9,18 +9,22 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import org.jointheleague.graphical.robot.Robot;
+
 /* Run the FindHiddenButton.jar to see the finished product. */
 
 public class _02_FindTheHiddenButton implements ActionListener{
 	JFrame window;
 	JPanel panel;
-	
+	int num = 0;
 	//1. create an array of JButtons. Don't initialize it yet.
-	
+	JButton[] buttons = new JButton[num];
 	//2 create an integer variable called hiddenButton
-	
+	int hiddenButton;
 	public static void main(String[] args) {
 		new _02_FindTheHiddenButton().start();
+		String x = JOptionPane.showInputDialog("Enter a positive number");
+		int y = Integer.parseInt(x);
 	}
 	
 	public void start() {
@@ -28,7 +32,7 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		panel = new JPanel();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//3.  Ask the user to enter a positive number and convert it to an int
+		//3.  Ask the user to Enter a positive number and convert it to an int
 		
 		//4. Initialize the array of JButtons to be the size of the int created in step 3
 		
