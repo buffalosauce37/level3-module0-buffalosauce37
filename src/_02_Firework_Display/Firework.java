@@ -75,6 +75,7 @@ sparks = new Spark[100];
 		//5. Iterate through each spark
 		for (int i = 0; i < sparks.length; i++) {
 			g.setColor(sparks[i].color);
+			g.fillOval(sparks[i].x, sparks[i].y, 300, 200);
 		}
 			//6. Set the color to the spark's color with g.setColor()
 			//7. Fill in an oval using the spark's x, y, and size with g.fillOval()
